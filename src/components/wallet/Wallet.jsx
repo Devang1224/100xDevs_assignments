@@ -35,24 +35,24 @@ const Wallet = ({keys}) => {
 
 
   return (
-    <div className="flex flex-col gap-4 p-4 rounded-lg  bg-[#09090B] w-max-[500px] ">
+    <div className="flex flex-col gap-4 p-2 sm:p-4 rounded-lg  bg-[#09090B] w-max-[450px] shadow-gold-glow">
       <div className="flex gap-2 flex-row">
       <img src="./assets/Solana_logo.png" width={30} height={20} alt="solana icon"/>  
       <h1 className="text-[20px] font-semibold">SOL</h1>
       </div>
       <div>
         <h1 className="text-[18px] font-semibold">Public Key: </h1>
-        <div className="flex items-center gap-2">
-           <p className="rounded-md bg-gray-600 p-2 text-[12px]">{keys.publicKey}</p>
+        <div className="flex items-center gap-2 w-full">
+           <p className="rounded-md bg-gray-600 p-2 text-[10px] sm:text-[12px]">{keys.publicKey}</p>
            <FaCopy size={15} className="cursor-pointer" onClick={()=>copyToClipboard(keys.publicKey)}/>
         </div>
       </div>
       <div>
         <h1 className="text-[18px] font-semibold">Private Key: </h1>
-        <div className="flex items-center gap-2">
-        <p className="rounded-md bg-gray-600 p-2 text-[12px] w-full overflow-hidden">
-          { secretKey }
-        </p>
+        <div className="flex items-center gap-2 w-full">
+          <p className="rounded-md bg-gray-600 p-2  text-[10px] sm:text-[12px] w-full ">
+            { secretKey }
+          </p>
            <FaCopy size={15} className="cursor-pointer " onClick={()=>copyToClipboard(keys.secretKey)}/>
 
         </div>

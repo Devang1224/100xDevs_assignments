@@ -46,7 +46,7 @@ setWalletCount((prev)=>prev+1);
    <div className='mt-20'>
     <h1 className='text-[22px] py-4'>Your Wallets</h1>
     {myWallets.length ? <h2 className='font-semibold p-2'>SOL</h2> : ''}
-    <div className='w-full overflow-x-auto flex gap-2'>
+    <div className='w-full grid grid-cols-1 place-items-center gap-6 lg:grid-cols-2'>
     {
       myWallets?.map((item,index)=>(
         <Wallet key={index} keys={item}/>

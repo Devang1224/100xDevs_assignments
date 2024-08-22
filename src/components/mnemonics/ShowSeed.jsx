@@ -19,13 +19,13 @@ const handleSeedSaved = (e) => {
 
 
  return (
-    <motion.div className='p-12 flex items-center flex-col '   
+    <motion.div className='p-0 mt-12 flex items-center flex-col sm:p-6 sm:mt-0 md:p-12 '   
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}   
       transition={{ duration: 0.5, ease: "ease", delay: 0.2 }}>
-    <div className='group relative min-w-[100%] bg-[#1F2938] overflow-hidden rounded-md p-4 grid grid-cols-1 gap-4 justify-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:min-w-[60%] '>
+    <div className='group relative min-w-[100%] bg-[#1F2938] overflow-hidden rounded-md p-2 grid  gap-4 justify-items-center sm:p-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:min-w-[60%] '>
           {
-             mnemonics.split(" ")?.map((item,index)=>{
+             mnemonics?.split(" ")?.map((item,index)=>{
                 return (
                     <div key={index} className='p-2 border rounded-md w-full text-center '>
                         {item}
