@@ -17,7 +17,7 @@ const[walletCount,setWalletCount] = useState(0);
 function handleGenerateSolanaWallet(){
 
 const path =  `m/44'/501'/${walletCount}'/0'`;
-const seed = mnemonicToSeedSync(mnemonics).toString('hex')
+const seed = mnemonicToSeedSync(mnemonics).toString('hex') 
 const derivedSeed = derivePath(path,seed).key;
 
 const secret = nacl.sign.keyPair.fromSeed(derivedSeed).secretKey
